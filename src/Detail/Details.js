@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {API_KEY, DATE} from '../constant/constant'
 import './detail.css'
+import Detailstyle from '../component/Detailstyle'
 
 export default function Detailholder(){
     const [alldetail, setAllDetail] = useState([])
@@ -17,12 +18,25 @@ export default function Detailholder(){
             console.log('Will get an error')
         })
     },[])
+    // Change style color in line 
+    const changeStyle = (color,fontSize) =>{
+        return{
+            ptag: {
+                fontSize,
+                color,
+            },
+            span: {
+                fontSize,
+                color,
+            }
+        }
+    }
     return (
-        <div className="allDetail">
-            <p className="smallDetail">Date:  {alldetail.date} </p>
-            <p className="smallDetail">Media type:  {alldetail.media_type} </p>
-            <p className="smallDetail">service_version:  {alldetail.service_version} </p>
-            <p className="smallDetail">Title:  {alldetail.title} </p>
-        </div>
+        <Detailstyle>        
+            <p  className="smallDetail">Date: <span style={changeStyle('blue','1.15rem').span}>{alldetail.date}</span>   </p>
+            <p  className="smallDetail">Media type: <span style={changeStyle('blue','1.15rem').span}>{alldetail.media_type}</span>  </p>
+            <p  className="smallDetail">service_version:  <span style={changeStyle('blue','1.15rem').span}>{alldetail.service_version}</span>   </p>
+            <p  className="smallDetail">Title:  <span style={changeStyle('blue','1.15rem').span}>{alldetail.title}</span>  </p>
+        </Detailstyle>
     )
 }

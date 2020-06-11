@@ -10,14 +10,7 @@ import {API_KEY, DATE} from './constant/constant'
 function App() {
   
   const [nasa, setNasa] = useState([])
-  const [cerrentNaSa, setCurrentNasa] = useState(null)
-
-  const openCurrentNasa = id => {
-    setCurrentNasa(id)
-  }
-  const closeCerrentNasa = () =>{
-      setCurrentNasa(null)
-  }
+ 
   useEffect(() =>{
     console.log('side effect')
     return ()=>{
