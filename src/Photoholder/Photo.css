@@ -1,0 +1,33 @@
+.addPhoto{
+    background-color: aqua;
+    widows: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;    
+
+ 
+}
+.photosDiv{
+    width: 40%;
+    min-width: 600px;
+    margin: 5px 0;
+    
+}
+.allPhotos{
+    border: 1px solid #d3d3d3;
+    width:75%;
+    height: 500px;
+    box-shadow: 1px 4px 30px rgba(0, 0, 0, 1) ;
+}
+.detail{
+    width:40%;
+    background-color: white;
+    height: 65vh;
+    min-width: 450px;
+    box-shadow: 1px 4px 30px rgba(0, 0, 0, 1) 
+}   
+.alotOfDetial{
+  
+    width: 80%;
+}
